@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SharedNotes.Domain.Abstract;
+using SharedNotes.Domain.Entities;
 
-namespace SharedNotes.Domain
+namespace SharedNotes.Domain.Concrete
 {
     public class WorkSpaceRepository : IWorkSpaceRepository
     {

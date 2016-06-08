@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using SharedNotes.Domain.Entities;
 
-namespace SharedNotes.Domain
+namespace SharedNotes.Domain.Abstract
 {
     public interface IWorkSpaceRepository
     {

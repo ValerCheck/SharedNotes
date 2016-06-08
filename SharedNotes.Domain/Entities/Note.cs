@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharedNotes.Domain
+namespace SharedNotes.Domain.Entities
 {
     public class Note
     {

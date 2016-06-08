@@ -57,19 +57,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INoteRepository.cs" />
-    <Compile Include="IWorkSpaceRepository.cs" />
-    <Compile Include="Note.cs" />
-    <Compile Include="WorkSpaceRepository.cs" />
-    <Compile Include="NotesRepository.cs" />
-    <Compile Include="WorkSpace.cs" />
-    <Compile Include="WorkSpaceContext.cs" />
+    <Compile Include="Abstract\INoteRepository.cs" />
+    <Compile Include="Abstract\IWorkSpaceRepository.cs" />
+    <Compile Include="Entities\Note.cs" />
+    <Compile Include="Concrete\WorkSpaceRepository.cs" />
+    <Compile Include="Concrete\NotesRepository.cs" />
+    <Compile Include="Entities\WorkSpace.cs" />
+    <Compile Include="Concrete\WorkSpaceContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
