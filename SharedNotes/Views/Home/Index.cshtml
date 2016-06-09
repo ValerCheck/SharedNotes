@@ -1,7 +1,35 @@
-﻿
+﻿@model SharedNotes.Domain.Entities.WorkSpace
+
 @{
+    Layout = null;
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpor" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>SharedNotes - create your own notes page</title>
+</head>
+<body>
+    @Html.ActionLink("Tell me more about you", "About");
+    <section>
+        @using (Html.BeginForm("CreateWorkSpace"))
+        {
+            @Html.ValidationSummary();
+            <p>Name your workspace: @Html.TextBoxFor(x => x.Name)</p>
+            <input type="submit" value="Create" />
+        }
+    </section>
+    <section>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary();
+            <p>Enter to workspace: @Html.TextBoxFor(x => x.Name)</p>
+            <input type="submit" value="Enter" />
+        }
+    </section>
+</body>
+</html>
 
