@@ -10,9 +10,22 @@ namespace SharedNotes.Domain.Concrete
     {
         private readonly WorkSpaceContext _dbContext = new WorkSpaceContext();
 
+        private WorkSpace _selectedWorkSpace;
+
         public void AddWorkSpace(WorkSpace workspace)
         {
             _dbContext.WorkSpaces.Add(workspace);
+            _dbContext.SaveChanges();
+        }
+
+        public void SetWorkSpace(WorkSpace workspace)
+        {
+            _selectedWorkSpace = workspace;
+        }
+
+        public WorkSpace GetWorkSpace()
+        {
+            return _selectedWorkSpace;
         }
 
         public WorkSpace GetWorkSpaceById(Guid id)
@@ -23,6 +36,7 @@ namespace SharedNotes.Domain.Concrete
         public void DeleteWorkSpace(WorkSpace workspace)
         {
             _dbContext.WorkSpaces.Remove(workspace);
+            _dbContext.SaveChanges();
         }
 
         public List<WorkSpace> GetAllWorkSpaces()
